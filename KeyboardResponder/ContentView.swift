@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var text = ""
+    
     var body: some View {
-        Text("Hello, world!").padding()
+        VStack {
+            TextEditor(text: $text)
+                .border(Color.blue, width: 1)
+            TextEditor(text: $text)
+                .border(Color.purple, width: 1)
+        }
+        .padding()
     }
 }
 
